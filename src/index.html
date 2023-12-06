@@ -3,26 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Homework 10</title>
   </head>
   <body>
-    <div class="container">
-      <div class="select-container">
-        <select class="breed-select"></select>
-        <div class="loader">Loading data, please wait...</div>
-      </div>
-      <div class="cat-info">
-        <img class="cat-image" alt="Cat Image" />
-        <div class="cat-details">
-          <h2 class="cat-name"></h2>
-          <p class="cat-description"></p>
-          <p class="cat-temperament"></p>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Cat Info App</h3>
+              <div class="form-group">
+                <label for="breedSelect">Select Cat Breed:</label>
+                <select
+                  class="form-control breed-select"
+                  id="breedSelect"
+                ></select>
+                <div class="loader text-center mt-3">
+                  <i class="fas fa-spinner fa-spin"></i> Loading data, please
+                  wait...
+                </div>
+              </div>
+              <div class="cat-info text-center">
+                <img class="cat-image img-fluid rounded" alt="Cat Image" />
+                <div class="mt-3">
+                  <h5 class="cat-name font-weight-bold"></h5>
+                  <p class="cat-description"></p>
+                  <p class="cat-temperament"></p>
+                </div>
+              </div>
+              <div class="error text-center mt-3">
+                Oops! Something went wrong! Try reloading the page!
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="error">Oops! Something went wrong! Try reloading the page!</p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="cat-api.js" type="module"></script>
     <script src="index.js" type="module"></script>

@@ -1,43 +1,45 @@
 body {
-  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #ff8c00, #ffd700, #32cd32, #1e90ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
-.container {
-  max-width: 600px;
-  margin: 50px auto;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
-.select-container {
-  margin-bottom: 20px;
+.card {
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .loader {
   display: none;
+  font-size: 1.2rem;
   color: #3498db;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .cat-info {
   display: none;
-  margin-top: 20px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.cat-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.cat-details {
-  margin-top: 10px;
 }
 
 .error {
   display: none;
   color: #e74c3c;
   font-weight: bold;
+}
+
+.cat-image {
+  max-width: 100%;
 }
