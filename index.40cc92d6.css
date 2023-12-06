@@ -1,0 +1,2 @@
+body{background:linear-gradient(45deg,#ff8c00,gold,#32cd32,#1e90ff) 0 0/400% 400%;animation:15s infinite gradientAnimation}@keyframes gradientAnimation{0%{background-position:0 0}50%{background-position:100% 0}to{background-position:0 0}}.card{transition:box-shadow .3s}.card:hover{box-shadow:0 0 20px rgba(0,0,0,.2)}.loader{color:#3498db;font-size:1.2rem;display:none}.cat-info{display:none}.error{color:#e74c3c;font-weight:700;display:none}.cat-image{max-width:100%}
+/*# sourceMappingURL=index.40cc92d6.css.map */
