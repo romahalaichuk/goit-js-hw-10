@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const catTemperament = document.querySelector('.cat-temperament');
   const error = document.querySelector('.error');
 
+  breedSelect.style.display = 'none';
+  loader.style.display = 'block';
+
   fetchBreeds()
     .then(response => {
       const breeds = response.data;
@@ -19,11 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         option.text = breed.name;
         breedSelect.add(option);
       });
+
       loader.style.display = 'none';
       breedSelect.style.display = 'block';
     })
     .catch(err => {
       console.error(err);
+
       loader.style.display = 'none';
       error.style.display = 'block';
     });
